@@ -96,7 +96,8 @@ while video_capture.isOpened():
         cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 1)
 
     # Show the frame of video on the screen
-    cv2.imshow('Video', frame)
+    #cv2.imshow('Video', frame)
+    cv2.imwrite('./output/frame.png',frame)
 
     # Hit 'q' to quit
     if cv2.waitKey(1) & 0xFF == ord('q'):
